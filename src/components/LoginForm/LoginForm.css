@@ -1,0 +1,39 @@
+.login { width: 100%; max-width: 420px; display: grid; gap: 24px; }
+
+.login__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.3rem;
+  letter-spacing: -0.03em;
+}
+.login__subtitle { margin-top: 6px; color: var(--ink-soft); }
+
+.login__form { display: grid; gap: 18px; }
+.login__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.92rem; }
+
+.login__divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+}
+.login__divider::before,
+.login__divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+.login__social { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.login__footer { text-align: center; color: var(--ink-soft); }
+.login__hint {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--violet-100);
+  color: var(--violet-900);
+  font-size: 0.84rem;
+  text-align: center;
+}
+.login__hint code { font-weight: 600; }
+
+@media (max-width: 420px) {
+  .login__social { grid-template-columns: 1fr; }
+}

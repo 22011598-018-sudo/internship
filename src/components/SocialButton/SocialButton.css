@@ -1,0 +1,15 @@
+.social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 50px;
+  width: 100%;
+  background: var(--white);
+  border: 2px solid var(--line);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.social:hover { border-color: var(--violet-500); background: var(--violet-100); }

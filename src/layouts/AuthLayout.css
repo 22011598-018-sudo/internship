@@ -1,0 +1,21 @@
+.auth {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  min-height: 100%;
+}
+.auth__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 40px 24px;
+  background: var(--paper);
+}
+.auth__mobile-logo { display: none; }
+
+@media (max-width: 900px) {
+  .auth { grid-template-columns: 1fr; }
+  .auth > .hero { display: none; }
+  .auth__mobile-logo { display: block; }
+}

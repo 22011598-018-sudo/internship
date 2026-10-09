@@ -1,0 +1,34 @@
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  cursor: pointer;
+  user-select: none;
+}
+.check__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.check__box {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--line);
+  border-radius: 7px;
+  background: var(--white);
+  color: transparent;
+  transition: all 0.18s var(--ease);
+}
+.check__input:checked + .check__box {
+  background: var(--violet-700);
+  border-color: var(--violet-700);
+  color: var(--white);
+}
+.check__input:focus-visible + .check__box {
+  outline: 3px solid var(--violet-500);
+  outline-offset: 2px;
+}

@@ -1,0 +1,30 @@
+:root {
+  /* Color */
+  --violet-900: #1d0f5c;
+  --violet-700: #3b1fa8;
+  --violet-500: #6a4bff;
+  --violet-100: #ebe7ff;
+  --coral: #ff6b57;
+  --mint: #2ec4a6;
+  --paper: #f6f4ff;
+  --white: #ffffff;
+  --ink: #17123a;
+  --ink-soft: #5d5883;
+  --line: #dcd8f2;
+  --danger: #d6293e;
+  --danger-bg: #ffe9ec;
+  --success-bg: #dff7f0;
+  --success-ink: #0b6b57;
+
+  /* Type */
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+
+  /* Shape */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
