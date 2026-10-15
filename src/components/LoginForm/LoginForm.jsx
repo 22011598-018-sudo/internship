@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import Alert from "@/components/Alert";
 import Button from "@/components/Button";
 import Checkbox from "@/components/Checkbox";
@@ -7,12 +8,25 @@ import { GithubIcon, GoogleIcon, LockIcon, MailIcon } from "@/components/icons";
 import useLoginForm from "@/hooks/useLoginForm";
 import "./LoginForm.css";
 
+// NEW: waqt ke hisaab se greeting
+function getGreeting() {
+  const hour = new Date().getHours();
+  if (hour < 12) return "Good morning";
+  if (hour < 18) return "Good afternoon";
+  return "Good evening";
+}
+
 export default function LoginForm() {
   const { values, errors, status, message, handleChange, handleSubmit } = useLoginForm();
+
+  // NEW: greeting aur saal sirf ek dafa calculate hoga
+  const greeting = useMemo(() => getGreeting(), []);
+  const currentYear = new Date().getFullYear();
 
   return (
     <div className="login">
       <header className="login__header">
+        <p className="login__greeting">{greeting} 👋</p>
         <h2 className="login__title">Welcome back</h2>
         <p className="login__subtitle">Sign in to continue your internship.</p>
       </header>
@@ -73,8 +87,19 @@ export default function LoginForm() {
         New intern? <a href="#signup">Create an account</a>
       </p>
 
+      {/* NEW: terms aur help links */}
+      <p className="login__terms">
+        By signing in, you agree to our <a href="#terms">Terms</a> and{" "}
+        <a href="#privacy">Privacy Policy</a>.
+      </p>
+
       <p className="login__hint">
         Demo: <code>intern@example.com</code> / <code>Intern@123</code>
+      </p>
+
+      {/* NEW: copyright line */}
+      <p className="login__copyright">
+        © {currentYear} Internship Portal. Need help? <a href="#support">Contact support</a>
       </p>
     </div>
   );
